@@ -8,7 +8,7 @@ An iOS app that identifies car dashboard warning lights instantly using on-devic
 
 ## Demonstration
 
-https://github.com/screenshots/Demonstration.mov
+https://github.com/user-attachments/assets/screenshots/Demonstration.mov
 
 ## Features
 
