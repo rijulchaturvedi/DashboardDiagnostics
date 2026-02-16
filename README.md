@@ -6,6 +6,10 @@ An iOS app that identifies car dashboard warning lights instantly using on-devic
   <img src="screenshots/app-icon.png" width="120" alt="App Icon"/>
 </p>
 
+## Demonstration
+
+https://github.com/screenshots/Demonstration.mov
+
 ## Features
 
 - **On-device ML classification** using a custom-trained MobileNetV2 CoreML model (no internet required)
