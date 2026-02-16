@@ -102,3 +102,47 @@ This repository has no open-source license. You may view the source code, but yo
 ## Author
 
 Designed & Developed by **Rijul Chaturvedi**
+
+## Architecture
+```mermaid
+flowchart TD
+    A["📸 User Captures Image"] --> B["Camera / Photo Library"]
+    B --> C["🧠 On-Device ML\nMobileNetV2 CoreML"]
+    
+    C --> D{Confidence ≥ 70%?}
+    
+    D -->|Yes| G["✅ Display Result"]
+    D -->|No| E{API Key\nConfigured?}
+    
+    E -->|No| G
+    E -->|Yes| F["☁️ Cloud AI Fallback"]
+    
+    F --> F1["Claude\n(Anthropic)"]
+    F --> F2["GPT-4o\n(OpenAI)"]
+    F --> F3["Gemini\n(Google)"]
+    
+    F1 --> G
+    F2 --> G
+    F3 --> G
+    
+    G --> H["📋 Result Card"]
+    
+    H --> H1["🔴 Critical\nBattery, Oil, Brakes,\nAirbag, Temperature,\nTransmission"]
+    H --> H2["🟡 Warning\nCheck Engine, ABS,\nTPMS, Traction,\nSeatbelt + 14 more"]
+    H --> H3["🔵 Info\nHigh Beam, Cruise,\nFog Light, Turn Signal\n+ 7 more"]
+
+    style A fill:#1a1a2e,stroke:#e94560,color:#fff
+    style B fill:#1a1a2e,stroke:#e94560,color:#fff
+    style C fill:#0f3460,stroke:#00d4aa,color:#fff,stroke-width:2px
+    style D fill:#16213e,stroke:#fbbf24,color:#fff,stroke-width:2px
+    style E fill:#16213e,stroke:#fbbf24,color:#fff
+    style F fill:#0f3460,stroke:#7c3aed,color:#fff,stroke-width:2px
+    style F1 fill:#1a1a2e,stroke:#d97706,color:#fff
+    style F2 fill:#1a1a2e,stroke:#10b981,color:#fff
+    style F3 fill:#1a1a2e,stroke:#3b82f6,color:#fff
+    style G fill:#065f46,stroke:#10b981,color:#fff,stroke-width:2px
+    style H fill:#1a1a2e,stroke:#e94560,color:#fff
+    style H1 fill:#7f1d1d,stroke:#ef4444,color:#fff
+    style H2 fill:#78350f,stroke:#f59e0b,color:#fff
+    style H3 fill:#1e3a5f,stroke:#3b82f6,color:#fff
+```
