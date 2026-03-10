@@ -1,4 +1,4 @@
-# 🚗 Dashboard Diagnostics
+# 🚗💨  Dashboard Diagnostics: For the hieroglyphs behind your steering wheel
 
 An iOS app that identifies car dashboard warning lights instantly using on-device machine learning. Point your camera at a dashboard symbol, and the app tells you what it means, how urgent it is, and what to do.
 
